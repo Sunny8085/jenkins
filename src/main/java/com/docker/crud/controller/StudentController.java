@@ -26,7 +26,7 @@ public class StudentController {
 	private StudentService studentService;
 	@GetMapping("/{studentId}")
 	public ResponseEntity<Student> getStudentById(@PathVariable BigInteger studentId) {
-		System.out.println("Test jenkins v1");
+		System.out.println("Test jenkins v2");
 		Optional<Student> student = studentService.getStudent(studentId);
 		return student.map(s -> ResponseEntity.ok().body(s)).orElse(ResponseEntity.notFound().build());
 	}
